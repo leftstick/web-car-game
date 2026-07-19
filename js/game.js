@@ -93,6 +93,7 @@ const Game = (function() {
     function calculateCellSize() {
         const boardWidth = gameBoard.clientWidth - boardPadding * 2;
         cellSize = boardWidth / gridSize;
+        gameBoard.style.setProperty('--cell-size', `${cellSize}px`);
     }
 
     function renderBoard() {
@@ -119,9 +120,11 @@ const Game = (function() {
         
         if (car.direction === 'horizontal') {
             carEl.style.width = `${cellSize * car.length - 8}px`;
+            carEl.style.height = `${cellSize - 8}px`;
             carEl.style.left = `${x + 4}px`;
             carEl.style.top = `${y + 4}px`;
         } else {
+            carEl.style.width = `${cellSize - 8}px`;
             carEl.style.height = `${cellSize * car.length - 8}px`;
             carEl.style.left = `${x + 4}px`;
             carEl.style.top = `${y + 4}px`;

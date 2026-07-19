@@ -211,8 +211,7 @@ body {
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: calc((85vw - 12px) / 6) calc((85vw - 12px) / 6);
-    max-width: calc(360px - 12px);
+    background-size: var(--cell-size) var(--cell-size);
     border-radius: 10px;
     pointer-events: none;
 }
@@ -221,10 +220,9 @@ body {
     content: '';
     position: absolute;
     right: 6px;
-    top: calc(50% - ((85vw - 12px) / 6) / 2);
+    top: calc(50% - var(--cell-size) / 2);
     width: 10px;
-    height: calc((85vw - 12px) / 6);
-    max-width: calc(360px - 12px);
+    height: var(--cell-size);
     background: repeating-linear-gradient(
         45deg,
         #fbbf24,
@@ -255,11 +253,11 @@ body {
 }
 
 .car.horizontal {
-    height: calc((85vw - 12px) / 6 - 8px);
+    height: calc(var(--cell-size) - 8px);
 }
 
 .car.vertical {
-    width: calc((85vw - 12px) / 6 - 8px);
+    width: calc(var(--cell-size) - 8px);
     flex-direction: column;
 }
 
@@ -739,23 +737,6 @@ body {
         width: 88vw;
     }
     
-    .game-board::before {
-        background-size: calc((88vw - 12px) / 6) calc((88vw - 12px) / 6);
-    }
-    
-    .game-board::after {
-        top: calc(50% - ((88vw - 12px) / 6) / 2);
-        height: calc((88vw - 12px) / 6);
-    }
-    
-    .car.horizontal {
-        height: calc((88vw - 12px) / 6 - 8px);
-    }
-    
-    .car.vertical {
-        width: calc((88vw - 12px) / 6 - 8px);
-    }
-    
     .car.target-car::before {
         font-size: 8px;
     }
@@ -772,22 +753,5 @@ body {
 @media (min-width: 768px) {
     .game-board {
         width: 360px;
-    }
-    
-    .game-board::before {
-        background-size: 58px 58px;
-    }
-    
-    .game-board::after {
-        top: calc(50% - 29px);
-        height: 58px;
-    }
-    
-    .car.horizontal {
-        height: 50px;
-    }
-    
-    .car.vertical {
-        width: 50px;
     }
 }
