@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汽车移出出库 - 益智小游戏</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="city-bg"></div>
+        
+        <div class="top-bar">
+            <div class="coins-info">
+                <div class="coin-icon">🪙</div>
+                <span id="coins">2500</span>
+            </div>
+            
+            <div class="level-info">
+                <div class="level-sign">
+                    <span>新手A</span>
+                </div>
+                <div class="level-sign green">
+                    <span id="levelText">第3关</span>
+                </div>
+            </div>
+            
+            <div class="right-icons">
+                <div class="spin-icon">
+                    🎯
+                    <span class="hint-count" id="hintCount">5</span>
+                </div>
+                <div class="red-packet">
+                    🧧
+                    <span class="money">¥5.20</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-board-wrapper">
+            <div class="exit-marker" id="exitMarker">
+                <div class="exit-arrow">➡️</div>
+            </div>
+            
+            <div class="game-board" id="gameBoard">
+            </div>
+        </div>
+        
+        <div class="bottom-bar">
+            <button class="action-btn hint-btn" id="hintBtn">
+                <span class="btn-icon">💡</span>
+                <span class="btn-text">提示</span>
+                <span class="btn-cost">200🪙</span>
+            </button>
+            <button class="action-btn reset-btn" id="resetBtn">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">重置</span>
+            </button>
+        </div>
+        
+        <div class="modal" id="winModal">
+            <div class="modal-content">
+                <div class="win-title">🎉 恭喜过关！</div>
+                <div class="win-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">步数</span>
+                        <span class="stat-value" id="winMoves">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">奖励</span>
+                        <span class="stat-value coins-reward">+100🪙</span>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button class="modal-btn secondary" id="replayBtn">重玩</button>
+                    <button class="modal-btn primary" id="nextLevelBtn">下一关</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="level-select-btn" id="levelSelectBtn">
+            📋 选关
+        </div>
+        
+        <div class="gamepad-hint" id="gamepadHint">
+            🎮 手柄已连接
+        </div>
+        
+        <div class="modal" id="levelModal">
+            <div class="modal-content level-modal">
+                <div class="modal-title">选择关卡</div>
+                <div class="level-grid" id="levelGrid">
+                </div>
+                <button class="modal-btn close-btn" id="closeLevelModal">关闭</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/levels.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

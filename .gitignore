@@ -1,0 +1,15 @@
+# 临时调试文件
+verify.html
+test-levels.txt
+levels_data.json
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.trae/
