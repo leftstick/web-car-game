@@ -805,7 +805,7 @@ const Game = (function() {
                     }
                 }
 
-                if (e.key === 'Escape' || e.key === 'Backspace') {
+                if (e.key === 'Escape' || e.key === 'Backspace' || e.key === ' ' || e.key === 'Enter') {
                     isCarActive = false;
                     updateSelectionVisual();
                 }
