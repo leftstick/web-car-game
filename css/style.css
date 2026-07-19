@@ -253,6 +253,15 @@ body {
         inset 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.car.horizontal {
+    height: calc((85vw - 12px) / 6 - 8px);
+}
+
+.car.vertical {
+    width: calc((85vw - 12px) / 6 - 8px);
+    flex-direction: column;
+}
+
 .car:active {
     cursor: grabbing;
     box-shadow: 
@@ -738,6 +747,14 @@ body {
         height: calc((88vw - 12px) / 6);
     }
     
+    .car.horizontal {
+        height: calc((88vw - 12px) / 6 - 8px);
+    }
+    
+    .car.vertical {
+        width: calc((88vw - 12px) / 6 - 8px);
+    }
+    
     .car.target-car::before {
         font-size: 8px;
     }
@@ -763,5 +780,13 @@ body {
     .game-board::after {
         top: calc(50% - 29px);
         height: 58px;
+    }
+    
+    .car.horizontal {
+        height: 50px;
+    }
+    
+    .car.vertical {
+        width: 50px;
     }
 }
